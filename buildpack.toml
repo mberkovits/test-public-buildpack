@@ -1,0 +1,13 @@
+api = "0.10"
+WithWindowsBuild = false
+WithLinuxBuild = true
+
+[buildpack]
+  id = "examples/node-js"
+  version = "0.0.1"
+  name = "Node.js Buildpack Package"
+  description = "A buildpack for Node.js applications supporting multiple architectures"
+
+[[targets]]
+  os = "linux"
+  arch = "arm64"
