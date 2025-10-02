@@ -1,3 +1,6 @@
 {
-  "name": "example-application"
+  "name": "example-application",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }

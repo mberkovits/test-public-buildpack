@@ -41,7 +41,13 @@ launch = true
 nodejs_version = "${node_js_version}"
 EOL
 
-# 6. SET DEFAULT START COMMAND
+# 6. INSTALL NPM DEPENDENCIES
+echo "-----> Installing dependencies"
+export PATH="${node_js_layer}/bin:${PATH}"
+cd "${CNB_SOURCE_DIR}"
+npm install
+
+# 7. SET DEFAULT START COMMAND
 cat > "${CNB_LAYERS_DIR}/launch.toml" << EOL
 [[processes]]
 type = "web"
